@@ -112,7 +112,7 @@ article,.gallery,.snapshot-box{background:var(--paper);border:1px solid #dce3d9;
 <tr>
 <td>Tarantula</td>
 <td>Present its changing-battlefield identity before adding mechanics</td>
-<td>Retreat Tell is optional; wait A/B remains unselected</td>
+<td>The retreat tell is optional. Losing the last valid target at B starts the reset to A immediately.</td>
 </tr>
 </tbody></table></div>
 <p>Acceptance of this working direction does not settle TBD values or unsupported systems.</p>
@@ -353,7 +353,7 @@ article,.gallery,.snapshot-box{background:var(--paper);border:1px solid #dce3d9;
 </tr>
 <tr>
 <td>No valid combat Target remains</td>
-<td>Default immediately returns to spawn with Invincible + Regen, then Idle until full; waiting A / B is unselected</td>
+<td>When the last valid target at B is lost, immediately reset to A with Invincibility and HP regeneration. Re-engage only after reaching A at full HP.</td>
 <td>Do not apply a 1-minute wait or permanent B stay as current rules</td>
 </tr>
 <tr>
@@ -794,7 +794,7 @@ article,.gallery,.snapshot-box{background:var(--paper);border:1px solid #dce3d9;
 <li>Gradual Threat decay is a provisional provisional Core assumption for discussion, not verified Core behavior.</li>
 </ul>
 <p>Death / combat exit cancels telegraphs and removes its pools. No Target → Default Reset to A, restoring the retreat allowance for the next fight.</p>
-<p><strong>Waiting-at-B alternatives remain unselected:</strong> A waits about 1 minute (timer origin / expiry action undecided); B stays until killed (requires an exception to default no-target return). Neither silently replaces the baseline.</p>
+<p><strong>Superseded wait-at-B drafts</strong> Older drafts proposed a one-minute wait or staying at B until killed. When the last valid target at B is lost, immediately reset to A with Invincibility and HP regeneration. Re-engage only after reaching A at full HP.</p>
 <h3 id="reader-topic-13">4.7 Large Skeleton — Elite / Tank Pressure</h3><figure class="context-reference"><img src="assets/9d5a73629c01e2b5a880d65f966de96d1ca5a5b6e0b952386e5e9fa459ff3cd7.png" alt="captain ironrattle" loading="lazy"><figcaption>Final-room Large Skeleton = Gravewarden 1F; Captain Ironrattle remains an art-sheet name, not a newly confirmed Canon name · <a href="#asset-06-captain-ironrattle">Original reference</a></figcaption></figure>
 <p><strong>Identity confirmed:</strong> this final-room enemy is Gravewarden 1F; retain existing abilities without new boss stats/phases. Automatic mob-calling wording still conflicts with the earlier draft; group/range/propagation need confirmation.</p>
 <p><strong>Sword Strike:</strong> single-target Auto-Attack, 1 Grid, every 2.5 seconds; medium damage, misses if Target leaves range before hit. No debuff or Fury contribution / benefit.</p>
@@ -802,12 +802,12 @@ article,.gallery,.snapshot-box{background:var(--paper);border:1px solid #dce3d9;
 <ul>
 <li>Single-target, 1 Grid, heavier than Auto-Attack. 1.5-second windup, Cast Bar / red weapon; stop movement / Auto-Attacks.</li>
 <li>Lock Target at start. Leaving range before impact can evade; not interruptible. No AoE / CC.</li>
-<li>Successful damage adds Fury after damage; misses add none. Rest 1 second after strike, without immediate overlapping Auto-Attack.</li>
+<li>Add one Fury stack after Crushing Strike causes a player to lose HP. Hitting Echo of Vesper or missing leaves the stack count unchanged. Rest 1 second after strike, without immediate overlapping Auto-Attack.</li>
 <li>First use 5 seconds after engagement; repeat 10 seconds from prior finish. Start only in melee range; approach first otherwise.</li>
 </ul>
 <p><strong>Growing Fury</strong></p>
 <ul>
-<li>Start at 0 stacks. Each stack adds 10% of base damage to later Crushing Strike only; cap 5 = +50%, additive.</li>
+<li>Start at 0 stacks. Only a Crushing Strike that costs a player HP grants one stack after damage. Each stack adds 10% of base damage to later Crushing Strike only; cap 5 = +50%, additive.</li>
 <li>Explanation: Crushing damage = Base × (1 + 0.10 × stacks before that hit).</li>
 <li>Auto-Attack / Roar neither add stacks nor benefit. Show icon and count. Target changes do not clear it; death / reset does. No forced tank swap.</li>
 </ul>
@@ -1250,7 +1250,7 @@ article,.gallery,.snapshot-box{background:var(--paper);border:1px solid #dce3d9;
 <li>Confirmed B support: Mage1 + Melee1 + Archer1. Old image&#39;s second Archer remains a conflict, not a new feature.</li>
 <li>No automatic whole-room recruitment. Highest Threat remains attack target; nearby combat involvement does not mean instant retargeting.</li>
 <li>Empty B stays empty; retreat still occurs, with no replacement spawns.</li>
-<li>Original wait alternatives A~1 minute / B indefinite remain unselected and need reset exceptions clarified. Do not promise guaranteed permanent safe passage.</li>
+<li>Fight at B while a valid target remains. When the last valid target at B is lost, immediately reset to A with Invincibility and HP regeneration. Re-engage only after reaching A at full HP.</li>
 </ul>
 <p><strong>A changes presentation only</strong>, not skills, animations, stats, cooldowns, counts or gameplay rules.</p>
 </div></details><details class="section" id="reader-section-25"><summary><span class="section-index" aria-hidden="true">◇</span><span>B — only if retreat is unreadable, add a tell</span></summary><div class="section-content">
@@ -1292,8 +1292,8 @@ article,.gallery,.snapshot-box{background:var(--paper);border:1px solid #dce3d9;
 </tr>
 <tr>
 <td>Party stops following</td>
-<td>Pursuit/reset depends on unresolved wait rule</td>
-<td>Clarify before promising a pass-without-killing experience</td>
+<td>Fight at B while a valid target remains. Reset to A immediately when the last target is lost.</td>
+<td>Test the time available to pass A while the spider is engaged at B.</td>
 </tr>
 </tbody></table></div>
 </div></details><details class="section" id="reader-section-27"><summary><span class="section-index" aria-hidden="true">◇</span><span>Lightweight review before Demo</span></summary><div class="section-content">
@@ -1304,7 +1304,7 @@ article,.gallery,.snapshot-box{background:var(--paper);border:1px solid #dce3d9;
 <li>If both suggest “always chase without considering anything,” record a weak-decision hypothesis and wait for playable evidence on cost, distance and pressure before tuning.</li>
 </ol>
 <p>Pitch versus skill-list is a <strong>presentation comparison</strong>; tell A/B is a <strong>readability comparison</strong>. Neither is a balance playtest. Avoid teaching the answer to the same reviewer and then calling recall evidence of improved clarity.</p>
-<p>Recommendation: try A first; keep B available if readability is the demonstrated problem. New LD layout needs A→B remapping. Do not select wait A/B or invent enjoyment scores.</p>
+<p>Recommendation: try A first; keep B available if readability is the demonstrated problem. New LD layout needs A→B remapping. Both tell variants use the same immediate no-target reset to A.</p>
 </div></details><p class="download"><a href="data:text/markdown;charset=utf-8;base64,IyBTa3VsbCBUYXJhbnR1bGEg4oCUIGV4aXN0aW5nIGNvcmUgLyBwaXRjaCAvIGZvY3VzZWQgb3B0aW9uCgoxNSBPY3RvYmVyIDIwMjYgwrcgQWNjZXB0ZWQgd29ya2luZyBkaXJlY3Rpb24sIG5vdCBhIHBsYXl0ZXN0IHJlc3VsdCBvciBzZWxlY3Rpb24gb2YgZXZlcnkgb3B0aW9uLgoKIyMgVmVyZGljdAoKVGhlIGNvbmNlcHQgbWF5IGFscmVhZHkgaGF2ZSBhIHVzZWZ1bCBjb3JlLCB3aGlsZSBhIHNraWxsLWxpc3QgcHJlc2VudGF0aW9uIG1ha2VzIGl0IHNvdW5kIGxpa2Ug4oCcYSBzcGlkZXIgZHJvcHBpbmcgcG9pc29uIGFuZCBydW5uaW5nIGF3YXnigJ0gcmF0aGVyIHRoYW4gKiphbiBlbmVteSB0aGF0IGNoYW5nZXMgdGhlIHByb2JsZW0gYnkgbW92aW5nIHRoZSBmaWdodCoqLiBDdXJyZW50IGV2aWRlbmNlIGNhbm5vdCBzZXBhcmF0ZSBwcmVzZW50YXRpb24gZmFpbHVyZSBmcm9tIG1lY2hhbmljYWwgd2Vha25lc3MuIOKAnFRoZSBkaXN0aW5jdGl2ZSBwb2ludCBpcyBub3QgdmlzaWJsZSB5ZXTigJ0gaXMgZmVlZGJhY2sgb24gd2hhdCB3YXMgc2hvd24sIG5vdCByZWplY3Rpb24gb3IgcHJvb2YgdGhhdCBiZXR0ZXIgd29yZGluZyBjcmVhdGVzIGZ1bi4KCiMjIEEg4oCUIGltcHJvdmUgdGhlIHBpdGNoLCBwcmVzZXJ2ZSBtZWNoYW5pY3MKClJvbGU6ICoqUmV0cmVhdGluZyBBcmVhIENvbnRyb2xsZXIqKi4KCj4gSXRzIGRpc3RpbmN0aW9uIGlzIG5vdCBqdXN0IHBvaXNvbiBjaXJjbGVzLiBBdCA2MCUgSFAgaXQgcmV0cmVhdHMgdG93YXJkIGEgZGVmZW5zaXZlIHBvc2l0aW9uLCBhc2tpbmcgdGhlIHBhcnR5IHdoZXRoZXIgdG8gZmluaXNoIGl0IG5vdywgcHJlcGFyZSB0aGUgZGVzdGluYXRpb24gZmlyc3QsIG9yIGxlYXZlIGl0LiBDbGVhcmluZyB0aGF0IGRlc3RpbmF0aW9uIGlzIGEgcmVhbCBhZHZhbnRhZ2U7IHRoZSBnYW1lIGRvZXMgbm90IHJlc3Bhd24gc3VwcG9ydCB0byBlcmFzZSB0aGUgcGxhbi4KCkRvIG5vdCBwcm9taXNlIGV2ZXJ5b25lIG11c3QgaGVzaXRhdGUgb3Igc3BsaXQgcm9sZXMuIEEgaGVhbHRoeSBwYXJ0eSBjaGFzaW5nIHRocmVlIHN1cHBvcnQgZW5lbWllcyBjYW4gbWFrZSBhIHZhbGlkIGNob2ljZS4KCiMjIyBTaG93IHRocmVlIGZyYW1lcyBiZWZvcmUgdGhlIHNraWxsIG51bWJlcnMKCnwgRnJhbWUgfCBTaG93IHwgUGxheWVyIHF1ZXN0aW9uIHwKfCAtLS0gfCAtLS0gfCAtLS0gfAp8IEZpZ2h0IGF0IEEgfCBQYXJ0eSBlbmdhZ2VzOyBsb2NrZWQgZ3JvdW5kIHBvb2wgaXMgYXZvaWRhYmxlIHwgSG93IGRvIHdlIHByZXNlcnZlIGdvb2QgZm9vdGluZz8gfAp8IEhQIHJlYWNoZXM2MCUgfCBWdWxuZXJhYmxlIHNwaWRlciBmb2xsb3dzIHRoZSByZWFsIHJldHJlYXQgcGF0aCwgbm90IGFuIGludnVsbmVyYWJsZSByZXNldCB8IEZpbmlzaCBub3cgb3IgZm9sbG93IGludG8gYSBuZXcgYXJlYT8gfAp8IEFycml2YWwgYXQgQiB8IFNob3cgYm90aCBvY2N1cGllZCBCIGFuZCBCIGNsZWFyZWQgYnkgYW5vdGhlciBwYXJ0eSB8IFdoYXQgZG9lcyBjaGFzaW5nIGFkZD8gV2hhdCBkaWQgcHJlcGFyYXRpb24gZ2Fpbj8gfAoKRW1wdHkgQiBtYXR0ZXJzOiBkaXNwbGF5aW5nIG9ubHkgc3VwcG9ydCBtYWtlcyB0aGlzIGxvb2sgbGlrZSBmb3JjZWQgcmVpbmZvcmNlbWVudHMgcmF0aGVyIHRoYW4gYSBzaGFyZWQtd29ybGQgY2hvaWNlLgoKIyMjIFByZXNlcnZlIHRoZSBydWxlcwoKLSBPbmUgcmV0cmVhdCBhdDYwJSwgQeKGkkI7IGNhbiBkaWUgZW4gcm91dGUuIE5vIGhlYWwvaW52dWxuZXJhYmlsaXR5L1RocmVhdCByZXNldC4KLSBObyBCaXRlL2NoYXNpbmcgZHVyaW5nIHJldHJlYXQuIE1heSBzdG9wIHRvIGNhc3QgdGhlIGV4aXN0aW5nIFBvb2wgaWYgY29vbGRvd24vcmFuZ2UvTE9TIGFsbG93LCB0aGVuIGNvbnRpbnVlOyBubyBtb3ZpbmcgY2FzdCBvciBjb29sZG93biByZXNldC4KLSBDb25maXJtZWQgQiBzdXBwb3J0OiBNYWdlMSArIE1lbGVlMSArIEFyY2hlcjEuIE9sZCBpbWFnZSdzIHNlY29uZCBBcmNoZXIgcmVtYWlucyBhIGNvbmZsaWN0LCBub3QgYSBuZXcgZmVhdHVyZS4KLSBObyBhdXRvbWF0aWMgd2hvbGUtcm9vbSByZWNydWl0bWVudC4gSGlnaGVzdCBUaHJlYXQgcmVtYWlucyBhdHRhY2sgdGFyZ2V0OyBuZWFyYnkgY29tYmF0IGludm9sdmVtZW50IGRvZXMgbm90IG1lYW4gaW5zdGFudCByZXRhcmdldGluZy4KLSBFbXB0eSBCIHN0YXlzIGVtcHR5OyByZXRyZWF0IHN0aWxsIG9jY3Vycywgd2l0aCBubyByZXBsYWNlbWVudCBzcGF3bnMuCi0gT3JpZ2luYWwgd2FpdCBhbHRlcm5hdGl2ZXMgQX4xIG1pbnV0ZSAvIEIgaW5kZWZpbml0ZSByZW1haW4gdW5zZWxlY3RlZCBhbmQgbmVlZCByZXNldCBleGNlcHRpb25zIGNsYXJpZmllZC4gRG8gbm90IHByb21pc2UgZ3VhcmFudGVlZCBwZXJtYW5lbnQgc2FmZSBwYXNzYWdlLgoKKipBIGNoYW5nZXMgcHJlc2VudGF0aW9uIG9ubHkqKiwgbm90IHNraWxscywgYW5pbWF0aW9ucywgc3RhdHMsIGNvb2xkb3ducywgY291bnRzIG9yIGdhbWVwbGF5IHJ1bGVzLgoKIyMgQiDigJQgb25seSBpZiByZXRyZWF0IGlzIHVucmVhZGFibGUsIGFkZCBhIHRlbGwKClNlcGFyYXRlIG9wdGlvbmFsIHByb3Bvc2FsLCBub3QgYXBwbGllZCBieSBhY2NlcHRhbmNlIG9mIHRoZSBvdmVyYWxsIGRvY3VtZW50OgoKPiBPbiBlbnRlcmluZyBSZXRyZWF0IHN0YXRlLCB0aGUgc3BpZGVyIHR1cm5zIHRvd2FyZCBpdHMgZXhpdCBhbmQgYnJpZWZseSBkaXNwbGF5cyDigJxSZXRyZWF0aW5n4oCdIGJlZm9yZS9kdXJpbmcgbW92ZW1lbnQuIFJldXNlIGV4aXN0aW5nIHR1cm5pbmcvYW5pbWF0aW9uIGlmIGZlYXNpYmxlLiBBZGQgbm8gZnJlZSBwYXVzZSwgZG8gbm90IGludGVycnVwdCBhIFBvb2wgYWxyZWFkeSBiZWluZyBjb21wbGV0ZWQsIGFuZCBwcmVzZXJ2ZSB0aHJlc2hvbGQsIGNvb2xkb3duLCBwYXRoLCBUaHJlYXQgYW5kIHZ1bG5lcmFiaWxpdHkuCgpTdGFydCB0aGUgdGVsbCBvbiBhY3R1YWwgUmV0cmVhdCBlbnRyeSBhZnRlciBhbnkgUG9vbCB0aGF0IG11c3QgZmluaXNoLiBBdm9pZCByZXZlYWxpbmcgZGVzdGluYXRpb25zIHRocm91Z2ggd2FsbHMgb3IgYXV0b21hdGljYWxseSBzaG93aW5nIEIncyByb3N0ZXIuIE9uZSByZWFkYWJsZSBzaWduYWwsIG5vdCBzdGFja2VkIEhVRCBsYXllcnMuIFNwZWNpZmljIGljb25zL0ZYL2F1ZGlvIHJlcXVpcmUgRGV2L0FydCBmZWFzaWJpbGl0eTsgbm8gemVyby1jb3N0IGNsYWltLgoKQmVuZWZpdDogZGlzdGluZ3Vpc2ggZGVsaWJlcmF0ZSByZXRyZWF0IGZyb20gbGVhc2gvcmVzZXQvcGF0aGluZyBmYWlsdXJlLiBDb3N0OiBVSS9sb2dpYyB3b3JrIGFuZCBsZXNzIHN1cnByaXNlLiBJZiBjaGFzaW5nIGhhcyBhbG1vc3Qgbm8gY29uc2VxdWVuY2UsIGEgdGVsbCBhbG9uZSB3aWxsIG5vdCBjcmVhdGUgYSBtZWFuaW5nZnVsIG5ldyBkZWNpc2lvbi4KCkRvIG5vdCBhZGQgV2ViL1N0dW4sIGZvcmNlZCBzdXBwb3J0IHJlc3Bhd24sIHJlcXVpcmVkIGNsYXNzIGNvdW50ZXJzIG9yIG5lYXJlc3QtcGxheWVyIHJldGFyZ2V0aW5nIG1lcmVseSB0byBhZGRyZXNzIHByZXNlbnRhdGlvbiBmZWVkYmFjay4KCiMjIENvdW50ZXIgc2NlbmFyaW9zIOKAlCBoeXBvdGhlc2VzLCBub3QgcmVzdWx0cwoKfCBTY2VuYXJpbyB8IFBvc3NpYmxlIGJlaGF2aW9yIHwgSW50ZXJwcmV0YXRpb24gfAp8IC0tLSB8IC0tLSB8IC0tLSB8CnwgSGVhbHRoeSBwYXJ0eSBwcmlvcml0aXplcyBFbGl0ZSB8IEtpbGwgYmVmb3JlIEIgb3IgcXVpY2tseSBjbGVhciBzdXBwb3J0IHwgVmFsaWQgc3VjY2VzczsgYXNrIHdoZXRoZXIgQ2hhc2Ugd2FzIHVuZGVyc3Rvb2QgYXMgYSBjaG9pY2UgfAp8IEIgcHJlLWNsZWFyZWQgfCBObyBleHRyYSBhZGRzIHwgQWNjZXB0ZWQgYWR2YW50YWdlOyBpbnNwZWN0IGNoYXNlIGRvd250aW1lIGluc3RlYWQgb2YgZm9yY2luZyByZXBsYWNlbWVudHMgfAp8IEFub3RoZXIgcGFydHkgZmlnaHRzIGF0IEIgfCBOZWFyYnkgcGxheWVycyBiZWNvbWUgaW52b2x2ZWQgfCBOZWVkIGNsZWFyIHNoYXJlZC13b3JsZCBhZ2dybyBib3VuZGFyaWVzOyBwcm94aW1pdHkgYWxvbmUgZG9lcyBub3QgZ3JhbnQgY3JlZGl0IG9yIGRldGVybWluZSB0YXJnZXQgfAp8IE1hZ2Ugc2xvdyArIFBvb2wgfCBMZWF2aW5nIGRhbmdlciBpcyBoYXJkZXIgfCBDaGVjayByZWFsIHRpbWluZy9zcGFjZS9jbGFzc2VzIGxhdGVyLCBub3QgYXNzdW1lIGd1YXJhbnRlZWQgYXZvaWRhbmNlIG9yIGFkZCBtb3JlIENDIHwKfCBQYXJ0eSBzdG9wcyBmb2xsb3dpbmcgfCBQdXJzdWl0L3Jlc2V0IGRlcGVuZHMgb24gdW5yZXNvbHZlZCB3YWl0IHJ1bGUgfCBDbGFyaWZ5IGJlZm9yZSBwcm9taXNpbmcgYSBwYXNzLXdpdGhvdXQta2lsbGluZyBleHBlcmllbmNlIHwKCiMjIExpZ2h0d2VpZ2h0IHJldmlldyBiZWZvcmUgRGVtbwoKMS4gU2hvdyB0aGUgdGhyZWUtZnJhbWUgcGl0Y2ggdG8gc29tZW9uZSB1bmZhbWlsaWFyIGFuZCBhc2sgdGhlbSB0byBkZXNjcmliZSB0aGUgZGlzdGluY3Rpb24gd2l0aG91dCBwcm9tcHRpbmcuCjIuIElmIHRoZXkgY2Fubm90LCBpbXByb3ZlIGV4cGxhbmF0aW9uL3JldHJlYXQgdmlzdWFscyBiZWZvcmUgYXNzdW1pbmcgYSBuZXcgc2tpbGwgaXMgbmVlZGVkLgozLiBJZiB1bmRlcnN0b29kIGJ1dCBjaG9pY2VzIHN0aWxsIHNvdW5kIGlkZW50aWNhbCwgdGFibGV0b3AgaGVhbHRoeSB2ZXJzdXMgb2NjdXBpZWQtQiBzaXR1YXRpb25zIHdpdGggZXhwbGljaXQgY2xhc3MvSFAgYXNzdW1wdGlvbnMuCjQuIElmIGJvdGggc3VnZ2VzdCDigJxhbHdheXMgY2hhc2Ugd2l0aG91dCBjb25zaWRlcmluZyBhbnl0aGluZyzigJ0gcmVjb3JkIGEgd2Vhay1kZWNpc2lvbiBoeXBvdGhlc2lzIGFuZCB3YWl0IGZvciBwbGF5YWJsZSBldmlkZW5jZSBvbiBjb3N0LCBkaXN0YW5jZSBhbmQgcHJlc3N1cmUgYmVmb3JlIHR1bmluZy4KClBpdGNoIHZlcnN1cyBza2lsbC1saXN0IGlzIGEgKipwcmVzZW50YXRpb24gY29tcGFyaXNvbioqOyB0ZWxsIEEvQiBpcyBhICoqcmVhZGFiaWxpdHkgY29tcGFyaXNvbioqLiBOZWl0aGVyIGlzIGEgYmFsYW5jZSBwbGF5dGVzdC4gQXZvaWQgdGVhY2hpbmcgdGhlIGFuc3dlciB0byB0aGUgc2FtZSByZXZpZXdlciBhbmQgdGhlbiBjYWxsaW5nIHJlY2FsbCBldmlkZW5jZSBvZiBpbXByb3ZlZCBjbGFyaXR5LgoKUmVjb21tZW5kYXRpb246IHRyeSBBIGZpcnN0OyBrZWVwIEIgYXZhaWxhYmxlIGlmIHJlYWRhYmlsaXR5IGlzIHRoZSBkZW1vbnN0cmF0ZWQgcHJvYmxlbS4gTmV3IExEIGxheW91dCBuZWVkcyBB4oaSQiByZW1hcHBpbmcuIERvIG5vdCBzZWxlY3Qgd2FpdCBBL0Igb3IgaW52ZW50IGVuam95bWVudCBzY29yZXMuCg==" download="TARANTULA_PITCH_OPTIONS.en.md">Download this section as Markdown</a></p></article><article id="review"><div class="article-label">Review / open decisions</div><h2 class="document-title">Rift of Catacomb 1F — Review and open decisions</h2>
 <p>Reviewed 12 October 2026 · Source: confirmed complete packet, 13 images and relevant earlier decisions.</p>
 <p>15 October update: final-room Large Skeleton = Gravewarden is confirmed; the new LD drawing is the working base; Core direction is Point-to-click/1+3/fake2, avoiding True Projectile rather than all projectile-looking visuals. Older image/route positions require remapping. See <a href="#update">latest update</a>. Overall working-draft acceptance does not select unresolved alternatives.</p>
@@ -1503,7 +1503,7 @@ article,.gallery,.snapshot-box{background:var(--paper);border:1px solid #dce3d9;
 </tr>
 <tr>
 <td>Waiting at B</td>
-<td>A about 1 minute / B until killed; neither selected</td>
+<td>Reset to A immediately when the last valid target at B is lost.</td>
 <td>A origin / expiry; B reset exception / recovery anchor. Deferred, not a new handoff blocker</td>
 </tr>
 <tr>
